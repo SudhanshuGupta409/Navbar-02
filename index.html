@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Navbar</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-center shadow-md">
+        <div class="nav-header flex justify-between items-center px-4 md:px-16">
+          <img src="./logo.svg" alt="logo" class="logo" />
+
+          <ul class="hidden text-sm font-medium md:flex space-x-5">
+            <li>
+                <a class="hover:text-sky-500 transition duration-300" href="#">Home</a>
+            </li>
+            <li>
+                <a class="hover:text-sky-500 transition duration-300" href="#">About</a>
+            </li>
+            <li>
+                <a class="hover:text-sky-500 transition duration-300" href="#">Projects</a>
+            </li>
+            <li>
+                <a class="hover:text-sky-500 transition duration-300" href="#">Contact</a>
+            </li>
+        </ul>
+
+          <!-- Hamburger icon -->
+          <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+            <span class="ham-top"></span>
+            <span class="ham-middle"></span>
+            <span class="ham-bottom"></span>
+          </button>
+        </div>
+
+       <div id="mobili-nav" class="md:hidden mobile-links">
+        <ul class="links hidden flex-col pl-4 py-2 space-y-3 text-sm font-medium tracking-[2px]" id="menu">
+            <li class="hover:translate-x-2 transition duration-300 hover:text-sky-500">
+                <a href="#">Home</a>
+            </li>
+            <li class="hover:translate-x-2 transition duration-300 hover:text-sky-500">
+                <a href="#">About</a>
+            </li>
+            <li class="hover:translate-x-2 transition duration-300 hover:text-sky-500">
+                <a href="#">Projects</a>
+            </li>
+            <li class="hover:translate-x-2 transition duration-300 hover:text-sky-500">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+       </div>
+      </div>
+    </nav>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const nav = document.getElementById("menu");
+      const mobiliNav = document.getElementById("mobili-nav");
+
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("open");
+        nav.classList.toggle("flex");
+        nav.classList.toggle("hidden");
+        mobiliNav.classList.toggle("show-links");
+      });
+    </script>
+  </body>
+</html>

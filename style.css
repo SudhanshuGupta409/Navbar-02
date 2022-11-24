@@ -1,0 +1,46 @@
+/* hamburger menu */
+.hamburger{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+.ham-top,.ham-middle,.ham-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: black;
+    transform: rotate(0);
+    transition: all .5s;
+}
+.ham-middle{
+    transform: translateY(7px);
+}
+.ham-bottom{
+    transform: translateY(14px);
+}
+
+.open{
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+.open .ham-top{
+    transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .ham-bottom{
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+.open .ham-middle{
+    display: none;
+}
+.mobile-links{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+.show-links{
+    height: 8rem;
+}
